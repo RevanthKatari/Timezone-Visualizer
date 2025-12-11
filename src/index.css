@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Custom Range Slider Styles */
+  .work-hours-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .work-hours-slider:hover {
+    height: 12px;
+  }
+
+  .work-hours-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #37352f;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .work-hours-slider::-webkit-slider-thumb:hover {
+    background: #2e2d29;
+    transform: scale(1.1);
+  }
+
+  .work-hours-slider::-webkit-slider-thumb:active {
+    transform: scale(0.95);
+  }
+
+  .work-hours-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #37352f;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .work-hours-slider::-moz-range-thumb:hover {
+    background: #2e2d29;
+    transform: scale(1.1);
+  }
+
+  .work-hours-slider::-moz-range-thumb:active {
+    transform: scale(0.95);
+  }
+
+  .work-hours-slider::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+  }
+
+  .work-hours-slider::-moz-range-track {
+    height: 10px;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+  }
+
+  .work-hours-slider:hover::-webkit-slider-runnable-track {
+    height: 12px;
+  }
+
+  .work-hours-slider:hover::-moz-range-track {
+    height: 12px;
+  }
+}
