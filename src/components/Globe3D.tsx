@@ -63,14 +63,6 @@ export const Globe3D = ({ timezone1, timezone2 }: Globe3DProps) => {
       try {
         const controls = globeRef.current.controls();
         if (controls) {
-          // Smoothly animate camera to center on selected locations
-          const targetLat = timezone1 && timezone2 
-            ? (timezone1.lat + timezone2.lat) / 2 
-            : (timezone1?.lat || timezone2?.lat || 0);
-          const targetLng = timezone1 && timezone2 
-            ? (timezone1.lng + timezone2.lng) / 2 
-            : (timezone1?.lng || timezone2?.lng || 0);
-          
           controls.autoRotate = false;
           controls.enableDamping = true;
           controls.dampingFactor = 0.1;

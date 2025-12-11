@@ -11,7 +11,7 @@ interface TimelineProps {
   city2?: string;
 }
 
-export const Timeline = ({ windows, timezone1, timezone2, city1, city2 }: TimelineProps) => {
+export const Timeline = ({ windows, timezone1, city1, city2 }: TimelineProps) => {
   if (windows.length === 0) {
     return (
       <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
